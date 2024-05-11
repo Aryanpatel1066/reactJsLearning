@@ -2,6 +2,10 @@
 import StationaryItem from "./StationaryItem"
  import StudentInfo from "./StudentInfo"
  import { takeAge as myage , takeName as myname } from "./fun"
+ import ListFruitItems  from "./ListFruitItems"
+import ImageAndCaption  from "./ImageAndCaption"
+import MyShop from "./MyShop"
+import EmployeeDetails from "./EmployeeDetails"
 export default function App(){
   const student = {
     name: 'John Doe',
@@ -11,6 +15,9 @@ export default function App(){
   }
   const items = ['pen', 'pencil', 'ruler', 'eraser'];
   const name="raju Stationary";
+  const imageLink =
+  'https://cdn.pixabay.com/photo/2023/03/18/10/43/plum-blossoms-7860381_1280.jpg'
+const caption = 'Spring Flowers'
   return(
     <>
     {myage(13)}
@@ -18,6 +25,10 @@ export default function App(){
     <EmployeeCard  />
     <StudentInfo studentLdrp={student}/>
     <StationaryItem items={items}name={name}/>
-    </>
+    <ListFruitItems />
+    <ImageAndCaption url={imageLink} name={caption}/>
+    <MyShop/>
+    <EmployeeDetails />
+     </>
   )
 }
