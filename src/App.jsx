@@ -1,12 +1,22 @@
- import EmployeeCard from "./EmployeeCard"
+import { useState } from "react"
+import EmployeeCard from "./EmployeeCard"
 import StationaryItem from "./StationaryItem"
- import StudentInfo from "./StudentInfo"
- import { takeAge as myage , takeName as myname } from "./fun"
- import ListFruitItems  from "./ListFruitItems"
+import StudentInfo from "./StudentInfo"
+import { takeAge as myage , takeName as myname } from "./fun"
+import ListFruitItems  from "./ListFruitItems"
 import ImageAndCaption  from "./ImageAndCaption"
 import MyShop from "./MyShop"
 import EmployeeDetails from "./EmployeeDetails"
+import Counter from "./Counter"
+
 export default function App(){
+
+
+  const [count ,setCount]= useState(0);
+  const handleClick =()=>{
+      setCount(count+1);
+      // console.log("click",count)
+   }
   const student = {
     name: 'John Doe',
     english: 90,
@@ -29,6 +39,8 @@ const caption = 'Spring Flowers'
     <ImageAndCaption url={imageLink} name={caption}/>
     <MyShop/>
     <EmployeeDetails />
+    <Counter />
+    <Counter onClick={handleClick} count={count}/>
      </>
   )
 }
