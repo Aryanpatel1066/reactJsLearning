@@ -8,7 +8,8 @@ import ImageAndCaption  from "./ImageAndCaption"
 import MyShop from "./MyShop"
 import EmployeeDetails from "./EmployeeDetails"
 import Counter from "./Counter"
-
+import Emp from "./Emp"
+import SqureLayout from "./SqureLayout"
 export default function App(){
 
 
@@ -30,7 +31,7 @@ export default function App(){
 const caption = 'Spring Flowers'
   return(
     <>
-    {myage(13)}
+    {/* {myage(13)}
     {myname("aryan")}
     <EmployeeCard  />
     <StudentInfo studentLdrp={student}/>
@@ -39,8 +40,11 @@ const caption = 'Spring Flowers'
     <ImageAndCaption url={imageLink} name={caption}/>
     <MyShop/>
     <EmployeeDetails />
-    <Counter />
     <Counter onClick={handleClick} count={count}/>
+    <Counter onClick={handleClick} count={count}/>
+<br/>
+    <Emp/> */}
+    <SqureLayout />
      </>
   )
 }
