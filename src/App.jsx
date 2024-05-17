@@ -9,7 +9,9 @@ import MyShop from "./MyShop"
 import EmployeeDetails from "./EmployeeDetails"
 import Counter from "./Counter"
 import Emp from "./Emp"
-import SqureLayout from "./SqureLayout"
+import AddTodo from "./AddTodo"
+import TodoList from "./TodoList"
+// import SqureLayout from "./SqureLayout"
 export default function App(){
 
 
@@ -29,6 +31,11 @@ export default function App(){
   const imageLink =
   'https://cdn.pixabay.com/photo/2023/03/18/10/43/plum-blossoms-7860381_1280.jpg'
 const caption = 'Spring Flowers'
+
+const [todos,setTodos]=useState([]);
+const addTodo=(todo)=>{
+ setTodos([...todos,{text:todo,completed:false}])
+}
   return(
     <>
     {/* {myage(13)}
@@ -42,9 +49,12 @@ const caption = 'Spring Flowers'
     <EmployeeDetails />
     <Counter onClick={handleClick} count={count}/>
     <Counter onClick={handleClick} count={count}/>
-<br/>
-    <Emp/> */}
-    <SqureLayout />
+<br/>*/}
+    <Emp/> 
+    {/* <SqureLayout /> */}
+    <h1>Todo List</h1>
+    <AddTodo addTodo={addTodo}/>
+    <TodoList todos={todos}/>
      </>
   )
 }
