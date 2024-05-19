@@ -12,6 +12,7 @@ import Emp from "./Emp"
 import AddTodo from "./AddTodo"
 import TodoList from "./TodoList"
 // import SqureLayout from "./SqureLayout"
+import ProductList from "./ProductList"
 export default function App(){
 
 
@@ -36,6 +37,16 @@ const [todos,setTodos]=useState([]);
 const addTodo=(todo)=>{
  setTodos([...todos,{text:todo,completed:false}])
 }
+
+const PRODUCTS = [
+  {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
+  {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
+  {category: "Fruits", price: "$2", stocked: false, name: "Passionfruit"},
+  {category: "Vegetables", price: "$2", stocked: true, name: "Spinach"},
+  {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"},
+  {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
+];
+
   return(
     <>
     {/* {myage(13)}
@@ -55,6 +66,8 @@ const addTodo=(todo)=>{
     <h1>Todo List</h1>
     <AddTodo addTodo={addTodo}/>
     <TodoList todos={todos}/>
-     </>
+
+    <ProductList product={PRODUCTS}/>
+      </>
   )
 }
