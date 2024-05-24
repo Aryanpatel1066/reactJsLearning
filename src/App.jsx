@@ -13,6 +13,7 @@ import AddTodo from "./AddTodo"
 import TodoList from "./TodoList"
 // import SqureLayout from "./SqureLayout"
 import ProductList from "./ProductList"
+import PracticeInput from "./PracticeInput"
 export default function App(){
 
 
@@ -61,13 +62,14 @@ const PRODUCTS = [
     <Counter onClick={handleClick} count={count}/>
     <Counter onClick={handleClick} count={count}/>
 <br/>*/}
-    <Emp/> 
+    {/* <Emp/>  */}
     {/* <SqureLayout /> */}
-    <h1>Todo List</h1>
-    <AddTodo addTodo={addTodo}/>
+    {/* <h1>Todo List</h1> */}
+    {/* <AddTodo addTodo={addTodo}/>
     <TodoList todos={todos}/>
 
-    <ProductList product={PRODUCTS}/>
+    <ProductList product={PRODUCTS}/> */}
+    {/* <PracticeInput /> */}
       </>
   )
 }
