@@ -14,6 +14,9 @@ import TodoList from "./TodoList"
 // import SqureLayout from "./SqureLayout"
 import ProductList from "./ProductList"
 import PracticeInput from "./PracticeInput"
+import SearchItem from "./SearchItem"
+ import ButtonFiltereData from "./ButtonFiltereData"
+
 export default function App(){
 
 
@@ -70,6 +73,9 @@ const PRODUCTS = [
 
     <ProductList product={PRODUCTS}/> */}
     {/* <PracticeInput /> */}
+    {/* <SearchItem /> */}
+    {/* <DropDowon/> */}
+    <ButtonFiltereData />
       </>
   )
 }
