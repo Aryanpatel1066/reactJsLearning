@@ -75,7 +75,7 @@ const PRODUCTS = [
     {/* <PracticeInput /> */}
     {/* <SearchItem /> */}
     {/* <DropDowon/> */}
-    <ButtonFiltereData />
+    {/* <ButtonFiltereData /> */}
       </>
   )
 }
