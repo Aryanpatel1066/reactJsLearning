@@ -17,6 +17,9 @@ import PracticeInput from "./PracticeInput"
 import SearchItem from "./SearchItem"
  import ButtonFiltereData from "./ButtonFiltereData"
 
+
+ // medium level topic learn
+ import PracticeUseEffect from "./mediumleveltopic/PracticeUseEffect"
 export default function App(){
 
 
@@ -76,6 +79,7 @@ const PRODUCTS = [
     {/* <SearchItem /> */}
     {/* <DropDowon/> */}
     {/* <ButtonFiltereData /> */}
+    <PracticeUseEffect />
       </>
   )
 }
