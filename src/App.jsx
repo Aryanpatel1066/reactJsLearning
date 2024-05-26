@@ -20,6 +20,7 @@ import SearchItem from "./SearchItem"
 
  // medium level topic learn
  import PracticeUseEffect from "./mediumleveltopic/PracticeUseEffect"
+ import UserList from "./mediumleveltopic/UserList"
 export default function App(){
 
 
@@ -79,7 +80,10 @@ const PRODUCTS = [
     {/* <SearchItem /> */}
     {/* <DropDowon/> */}
     {/* <ButtonFiltereData /> */}
-    <PracticeUseEffect />
+
+    {/* part2 some useEffect  */}
+    {/* <PracticeUseEffect /> */}
+    <UserList />
       </>
   )
 }
