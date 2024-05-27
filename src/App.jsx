@@ -20,7 +20,14 @@ import SearchItem from "./SearchItem"
 
  // medium level topic learn
  import PracticeUseEffect from "./mediumleveltopic/PracticeUseEffect"
- import UserList from "./mediumleveltopic/UserList"
+//  import UserList from "./mediumleveltopic/UserList"
+
+import {Routes,Route,Link} from "react-router-dom"
+import About from "./mediumleveltopic/About"
+import Home from "./mediumleveltopic/Home"
+import NotFound from "./mediumleveltopic/NotFound"
+import Category from "./mediumleveltopic/Category"
+import AppRoute from "./mediumleveltopic/AppRoute"
 export default function App(){
 
 
@@ -83,7 +90,15 @@ const PRODUCTS = [
 
     {/* part2 some useEffect  */}
     {/* <PracticeUseEffect /> */}
-    <UserList />
+    {/* <UserList /> */}
+
+    {/* make a route component */}
+    <Link to="/">Home</Link>{" "}||
+    <Link to="/category">category</Link>{" "}||
+    <Link to="/about">about</Link>{" "}||
+    <Link to="notfound">notfound</Link>
+    
+    <AppRoute/>
       </>
   )
 }
