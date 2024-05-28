@@ -96,8 +96,8 @@ const PRODUCTS = [
     <Link to="/">Home</Link>{" "}||
     <Link to="/category">category</Link>{" "}||
     <Link to="/about">about</Link>{" "}||
-    <Link to="notfound">notfound</Link>
-    
+    <Link to="notfound">notfound</Link>{" "}||
+    <Link to="/bloglist">bloglist</Link>
     <AppRoute/>
       </>
   )
