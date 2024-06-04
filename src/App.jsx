@@ -28,6 +28,11 @@ import Home from "./mediumleveltopic/Home"
 import NotFound from "./mediumleveltopic/NotFound"
 import Category from "./mediumleveltopic/Category"
 import AppRoute from "./mediumleveltopic/AppRoute"
+import DisplayComponent from "./useContext/DisplayComponent"
+import ChangeComponent from "./useContext/ChangeComponent"
+import MyProvider from "./useContext/MyProvider"
+ 
+
 export default function App(){
 
 
@@ -93,12 +98,17 @@ const PRODUCTS = [
     {/* <UserList /> */}
 
     {/* make a route component */}
-    <Link to="/">Home</Link>{" "}||
+    {/* <Link to="/">Home</Link>{" "}||
     <Link to="/category">category</Link>{" "}||
     <Link to="/about">about</Link>{" "}||
     <Link to="notfound">notfound</Link>{" "}||
     <Link to="/bloglist">bloglist</Link>
-    <AppRoute/>
+    <AppRoute/> */}
+    <MyProvider>
+      <DisplayComponent />
+      <ChangeComponent />
+    </MyProvider>
+     
       </>
   )
 }
