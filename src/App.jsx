@@ -31,8 +31,11 @@ import AppRoute from "./mediumleveltopic/AppRoute"
 import DisplayComponent from "./useContext/DisplayComponent"
 import ChangeComponent from "./useContext/ChangeComponent"
 import MyProvider from "./useContext/MyProvider"
- 
 
+import { Header } from "./neogPractice/Header"
+import {products} from "./neogPractice/productDb"
+import ProductList2 from "./neogPractice/ProductList2"
+import Cart from "./neogPractice/Cart"
 export default function App(){
 
 
@@ -104,11 +107,15 @@ const PRODUCTS = [
     <Link to="notfound">notfound</Link>{" "}||
     <Link to="/bloglist">bloglist</Link>
     <AppRoute/> */}
-    <MyProvider>
+    {/* <MyProvider>
       <DisplayComponent />
       <ChangeComponent />
-    </MyProvider>
-     
+    </MyProvider> */}
+     <Header/>
+     <Routes>
+         <Route path="/" element={<ProductList2 products={products}/>}/>
+         <Route path="/cart" element={<Cart/>}/>
+         </Routes>
       </>
   )
 }
