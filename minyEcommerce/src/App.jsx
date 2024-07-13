@@ -3,12 +3,12 @@
  function App(){
   return(
     <>
-    <ReactRouter/>
     <nav>
-      <NavLink to="/">Home</NavLink>{" "}
+      <NavLink to="/">Home</NavLink>{" "} ||
       <NavLink to="/cart">cart</NavLink>{" "}
     </nav>
-     
+    <ReactRouter/>
+
     </>
   )
  }
