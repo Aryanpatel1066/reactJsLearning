@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
-
+import AddToCart from "./AddToCart";
+import { CartContext ,CartProvider} from "../context/CartContext";
 const dataApi = "https://fakestoreapi.com/products";
 
 const styleProduct = {
@@ -15,6 +16,8 @@ const boldStyle = {
 };
 
 const ProductList = () => {
+  const {cart}=useContext(CartContext);
+  const {addToCart}=useContext(CartContext);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -38,18 +41,20 @@ const ProductList = () => {
   return (
     <div>
       <h1>Product List Page:</h1>
+      <h2>cart item is : {cart.length}</h2>
       {loading && <h3>Loading....</h3>}
       {error && <h3>Error...</h3>}
       <ul>
-        {data.map(({ id, title, category, price }) => (
-          <li style={styleProduct} key={id}>
+        {data.map((item) => (
+          <li style={styleProduct} key={item.id}>
             <b style={boldStyle}>title:</b>
-            {title} <br />
+            {item.title} <br />
             <b style={boldStyle}>category:</b>
-            {category} <br />
+            {item.category} <br />
             <b style={boldStyle}>price:</b>
-            {price} <br />
-            <NavLink to={`/productdetails/${id}`}>more details</NavLink>
+            {item.price} <br />
+            <NavLink to={`/productdetails/${item.id}`}>more details</NavLink>
+            <button onClick={()=>addToCart(item)}>add to cart</button>
           </li>
         ))}
       </ul>
