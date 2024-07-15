@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import AddToCart from "./AddToCart";
 import { CartContext ,CartProvider} from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext";
 const dataApi = "https://fakestoreapi.com/products";
 
 const styleProduct = {
@@ -21,7 +22,7 @@ const ProductList = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-
+  const {wishlist,addToWishlist}=useContext(WishlistContext);
   const fetchData = async () => {
     try {
       const response = await fetch(dataApi);
@@ -42,6 +43,7 @@ const ProductList = () => {
     <div>
       <h1>Product List Page:</h1>
       <h2>cart item is : {cart.length}</h2>
+      <h2>wishlist item is : {wishlist.length}</h2>
       {loading && <h3>Loading....</h3>}
       {error && <h3>Error...</h3>}
       <ul>
@@ -55,6 +57,7 @@ const ProductList = () => {
             {item.price} <br />
             <NavLink to={`/productdetails/${item.id}`}>more details</NavLink>
             <button onClick={()=>addToCart(item)}>add to cart</button>
+            <button onClick={()=>addToWishlist(item)}>add to wishlist</button>
           </li>
         ))}
       </ul>

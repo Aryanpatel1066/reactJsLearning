@@ -5,7 +5,8 @@
     <>
     <nav>
       <NavLink to="/">Home</NavLink>{" "} ||
-      <NavLink to="/cart">cart</NavLink>{" "} ||
+      <NavLink to="/cart">Cart</NavLink>{" "} ||
+      <NavLink to="/wishlist">Wishlist</NavLink>
     </nav>
     <ReactRouter/>
 
