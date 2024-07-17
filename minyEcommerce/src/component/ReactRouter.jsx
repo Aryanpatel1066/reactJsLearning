@@ -4,6 +4,7 @@ import AddToCart from "../pages/AddToCart";
 import NotFound from "../pages/NotFound";
 import ProductDetails from "../pages/ProductDetails";
 import WishList from '../pages/WishList';
+import Reducers from '../pages/Reducers';
 function ReactRouter(){
     return(
         <>
@@ -13,6 +14,7 @@ function ReactRouter(){
             <Route path='*' element={<NotFound/>}/>
             <Route path='/productdetails/:productId' element={<ProductDetails/>}/>
             <Route path='/wishlist' element={<WishList/>}/>
+            <Route path='/reducers' element={<Reducers/>}/>
         </Routes>
         </>
     )
