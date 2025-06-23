@@ -1,35 +1,96 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+ import Card from "./components/Card";
+import { UserCard } from "./components/UserCard";
+import UserLogin from "./components/UserLogin";
+  import Stationary from "./components/Stationary";
+import EmployeeDetails from "./components/EmployeeDetails";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+ function App(){
+  const userInfoObj={
+    name:"hulk",
+    age:"1066"
+  }
+  const header = "stationary items"
+  const items = ['pen', 'pencil', 'ruler', 'eraser']
+  const products = [
+ { name: 'Perk', quantity: 10, sales: 7 },
+ { name: 'Pepsi', quantity: 10, sales: 20 },
+ { name: 'Coke', quantity: 18, sales: 50 },
+ { name: 'Maggi', quantity: 41, sales: 22 },
+ { name: '5Star', quantity: 7, sales: 9 },
+]
+const employees = [
+ {
+ name: 'Jack Smith',
+ level: 2,
+ dept: 'Tech',
+ designation: 'Manager',
+ salary: 24000,
+ },
+ {
+ name: 'Mary Robbins',
+ level: 3,
+ dept: 'Fin',
+ designation: 'Manager',
+ salary: 28000,
+ },
+ {
+ name: 'Steve Williams',
+ level: 4,
+ dept: 'Ops',
+ designation: 'President',
+ salary: 35000,
+ },
+ {
+ name: 'Bob Andrews',
+ level: 1,
+ dept: 'Fin',
+ designation: 'Trainee',
+ salary: 16500,
+ },
+ {
+ name: 'Dave Martin',
+ level: 2,
+ dept: 'Fin',
+ designation: 'Manager',
+ salary: 21700,
+ },
+ {
+ name: 'Julia Clarke',
+level: 3,
+ dept: 'Ops',
+ designation: 'Manager',
+ salary: 26900,
+ },
+ {
+ name: 'Kathy Jones',
+ level: 4,
+ dept: 'Tech',
+ designation: 'President',
+ salary: 42500,
+ },
+ {
+ name: 'Tom Bresnan',
+ level: 2,
+ dept: 'Tech',
+ designation: 'Manager',
+ salary: 22200,
+ },
+]
+  return(
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h1>my app</h1>
+    {/* <UserCard name={"AryanPatel"}age={1066}  />
+        <UserCard  age={1066}  />
+
+    <UserCard userInfoObj={userInfoObj}/>
+    <Card> <h2>Title 1</h2>
+  <p>This is the first card's content.</p></Card> */}
+  {/* <UserLogin isLogin={true} name={"aryan"}/>
+    <UserLogin isLogin={true}  />
+<UserLogin /> */}
+<Stationary header={header} items={items} products={products}/>
+<EmployeeDetails employees={employees}/>
     </>
   )
-}
-
-export default App
+ }
+ export default App;
