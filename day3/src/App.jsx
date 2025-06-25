@@ -3,6 +3,10 @@ import { UserCard } from "./components/UserCard";
 import UserLogin from "./components/UserLogin";
   import Stationary from "./components/Stationary";
 import EmployeeDetails from "./components/EmployeeDetails";
+import Vegitable from "./components/Vegitable";
+import Btn from "./components/Btn";
+import Counter from "./components/Counter";
+import ColorChanger from "./components/ColorChanger";
 
  function App(){
   const userInfoObj={
@@ -76,6 +80,34 @@ level: 3,
  salary: 22200,
  },
 ]
+const vegetables = [
+ {
+ id: 1,
+name: 'Carrots',
+ pickDate: '2023-03-25',
+ },
+ {
+ id: 2,
+ name: 'Broccoli',
+ pickDate: '2023-03-30',
+ },
+ {
+ id: 3,
+ name: 'Peppers',
+ pickDate: '2023-03-25',
+ },
+ {
+ id: 4,
+ name: 'Tomatoes',
+ pickDate: '2023-03-27',
+ },
+ {
+ id: 5,
+ name: 'Ladies Finger',
+ pickDate: '2023-03-30',
+ },
+]
+
   return(
     <>
     <h1>my app</h1>
@@ -88,8 +120,13 @@ level: 3,
   {/* <UserLogin isLogin={true} name={"aryan"}/>
     <UserLogin isLogin={true}  />
 <UserLogin /> */}
-<Stationary header={header} items={items} products={products}/>
-<EmployeeDetails employees={employees}/>
+{/* <Stationary header={header} items={items} products={products}/>
+<EmployeeDetails employees={employees}/> */}
+{/* <Vegitable vegetables={vegetables}/> */}
+
+{/* <Btn/> */}
+{/* <Counter/> */}
+<ColorChanger/>
     </>
   )
  }
