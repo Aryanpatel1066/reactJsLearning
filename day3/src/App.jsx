@@ -7,7 +7,11 @@ import Vegitable from "./components/Vegitable";
 import Btn from "./components/Btn";
 import Counter from "./components/Counter";
 import ColorChanger from "./components/ColorChanger";
-
+import HeroComponent from "./day4/HeroComponent";
+import FontSizeIncrease from "./day4/FontSizeIncrease";
+import FruitData from "./day4/FruitData";
+import MarkStrike from "./day4/MarkStrike";
+import TodoApp from "./day4/TodoApp";
  function App(){
   const userInfoObj={
     name:"hulk",
@@ -107,7 +111,70 @@ name: 'Carrots',
  pickDate: '2023-03-30',
  },
 ]
+const characters = {
+ heroes: [
+ {
+ name: "IRON MAN",
+ powers: "Genius,Rich,IRON Suit",
+ costume: "IRON MAN suit",
+ },
+ {
+ name: "ANT MAN",
+ powers: "Ant man suit",
+ costume: "Ant man suit",
+ },
+ {
+ name: "Spider-man",
+ powers: "Reflexes,Speed,Spider-Sense",
+ costume: "Spider Suit",
+ },
+ {
+ name: "Bat man",
+ powers: "Rich,Bat suit",
+ costume: "Bat Suit",
+ },
+ {
+ name: "Super-man",
+ powers: "Superhuman strength,Reflexes,Speed",
+ costume: "Superman Suit",
+ },
+ ],
+ villains: [
+ {
+ name: "Thanos",
+ powers: "Superhuman strength,Reflexes,Speed,",
+ costume: "Metal armor",
+ },
+ {
+ name: "Venom",
+ powers: "shapeshifting and camouflage Symbiotes autonomous defense",
+ costume: "black suit",
+ },
+ {
+ name: "Kang the conqueror",
+ powers: "time travel, can access all tech",
+ costume: "kang armor",
+ },
+ {
+ name: "Joker",
+ powers: "clownlike appearance and sick humour",
+ costume: "Joker costume",
+ },
+ ],
+};
+const itemList = [
+ { id: 1, name: "Apple", category: "Fruit" },
+ { id: 2, name: "Carrot", category: "Vegetable" },
+ { id: 3, name: "Banana", category: "Fruit" },
+ { id: 4, name: "Broccoli", category: "Vegetable" },
+];
 
+const todoItems2 = [
+   {id: 1, task: "Writing 1-page poem", isDone: true},
+ {id: 2, task: "Gym", isDone: false},
+ {id: 3, task: "Shopping", isDone: false},
+ {id: 4, task: "Standup call", isDone: true},
+]
   return(
     <>
     <h1>my app</h1>
@@ -126,7 +193,13 @@ name: 'Carrots',
 
 {/* <Btn/> */}
 {/* <Counter/> */}
-<ColorChanger/>
+{/* <ColorChanger/> */}
+{/* <HeroComponent characters={characters}/> */}
+{/* <FontSizeIncrease/> */}
+{/* <FruitData itemList={itemList}/> */}
+{/* <MarkStrike todoItems2={todoItems2}/> */}
+
+<TodoApp/>
     </>
   )
  }
